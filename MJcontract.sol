@@ -8,11 +8,13 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 
-contract MatheusJ is ERC20, ERC20Burnable, ERC20Pausable, Ownable, ERC20Permit {
+contract InteliBlockchain is ERC20, ERC20Burnable, ERC20Pausable, Ownable, ERC20Permit {
+    address dono;
+
     constructor(address initialOwner)
-        ERC20("MatheusJ", "MJ")
+        ERC20("InteliBlockchain", "IB")
         Ownable(initialOwner)
-        ERC20Permit("MatheusJ")
+        ERC20Permit("InteliBlockchain")
     {}
 
     function pause() public onlyOwner {
